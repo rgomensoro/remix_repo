@@ -17,6 +17,9 @@ contract Storage {
      */
     function store(uint256 num) public {
         number = num;
+
+        /* Teste de git */
+
     }
 
     /**
