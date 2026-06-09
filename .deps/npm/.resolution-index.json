@@ -19,5 +19,13 @@
         "file": "contracts/1_Storage.sol"
       }
     }
+  },
+  "contracts/MyContract.sol": {
+    "__sources__": {
+      "contracts/MyContract.sol": {
+        "content": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.8.14;\n\ncontract MyContract {\n\n    string public ourString = \"Hello World!\";\n\n    function updateOurString(string memory _updateString) public\n    {\n        ourString = _updateString;\n    }\n\n}",
+        "file": "contracts/MyContract.sol"
+      }
+    }
   }
 }
