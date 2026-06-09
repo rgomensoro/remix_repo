@@ -27,5 +27,13 @@
         "file": "contracts/MyContract.sol"
       }
     }
+  },
+  "contracts/TypeExample.sol": {
+    "__sources__": {
+      "contracts/TypeExample.sol": {
+        "content": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.8.14;\n\ncontract TypeExampleContract {\n\n    bool public myBool = true;\n\n    uint public myUint = 1;\n\n    uint8 public myInt = 0;\n\n    function setUint(uint _myUint) public \n    {\n        unchecked\n        {\n            myUint = _myUint;\n        }\n    }\n    function setInt(uint8 _myInt) public \n    {\n         myInt = _myInt;\n    }\n\n    function setBool(bool _myBool) public \n    {\n        myBool = _myBool;\n    }\n\n    function IncrementInt() public \n    {\n        myUint++;\n    }\n\n    function DecrementInt() public \n    {\n        unchecked\n        {\n            myUint--;\n        }\n    \n    }\n\n}\n",
+        "file": "contracts/TypeExample.sol"
+      }
+    }
   }
 }
