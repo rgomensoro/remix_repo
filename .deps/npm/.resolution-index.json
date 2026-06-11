@@ -39,7 +39,7 @@
   "contracts/Messenger.sol": {
     "__sources__": {
       "contracts/Messenger.sol": {
-        "content": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.8.14;\n\ncontract Messenger {\n\n    string message = \"Hello!\";\n\n    address public creatorAddress;\n\n    constructor (address _creatoraddress)\n    {\n        creatorAddress = _creatoraddress;\n    }\n\n    function readMessage () public view returns (string memory)\n    {\n        return message;\n    }\n\n    function writeMessage (string memory _message) public \n    {\n        if (creatorAddress == msg.sender)\n        {\n            message = _message;\n        }\n    }\n\n}",
+        "content": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.8.14;\n\ncontract Messenger {\n\n    string message;\n    uint counter;\n\n    address public creatorAddress;\n\n    constructor (address _creatoraddress)\n    {\n        creatorAddress = _creatoraddress;\n\n        message = \"Hello!\";\n\n        counter = 0;\n    }\n\n    function readMessage () public view returns (string memory)\n    {\n        return message;\n    }\n\n    function writeMessage (string memory _message) public \n    {\n        if (creatorAddress == msg.sender)\n        {\n            counter++;\n            message = _message;\n        }\n    }\n\n    function updatedCount () public view returns (uint)\n    {\n        return counter;\n    }\n\n}",
         "file": "contracts/Messenger.sol"
       }
     }

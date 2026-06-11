@@ -43,6 +43,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "updatedCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -84,11 +97,11 @@
 	},
 	"sources": {
 		"contracts/Messenger.sol": {
-			"keccak256": "0xd06f6e64530d3baa5e63e8dd37cdfafae964f24b4f6fa37a9837dfd08b197869",
+			"keccak256": "0x3db9a57285b7242f6bb0aa3597193571e0934eac756eb9dd99bec46eab21be94",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://69128f245b07bcbeeca4218c9ac109579528c7632ba2f543af9da0efedee5957",
-				"dweb:/ipfs/QmZoS8eZn6EipXn1pWcjBoufrEYLsnK3KxiCpiuRZHf4VL"
+				"bzz-raw://76f839cc0e7b0be524b94d1b29be424ab7dd229ea11741ec8bbfce600bfcef53",
+				"dweb:/ipfs/QmeUTsjPBDfzNoFLkfRzkQe8JQdLArY275sUr8M6UmuQwt"
 			]
 		}
 	},

@@ -4,13 +4,18 @@ pragma solidity 0.8.14;
 
 contract Messenger {
 
-    string message = "Hello!";
+    string message;
+    uint counter;
 
     address public creatorAddress;
 
     constructor (address _creatoraddress)
     {
         creatorAddress = _creatoraddress;
+
+        message = "Hello!";
+
+        counter = 0;
     }
 
     function readMessage () public view returns (string memory)
@@ -22,8 +27,14 @@ contract Messenger {
     {
         if (creatorAddress == msg.sender)
         {
+            counter++;
             message = _message;
         }
+    }
+
+    function updatedCount () public view returns (uint)
+    {
+        return counter;
     }
 
 }
