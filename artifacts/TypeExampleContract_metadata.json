@@ -20,6 +20,70 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_myString",
+						"type": "string"
+					}
+				],
+				"name": "compareString",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_myAddress",
+						"type": "address"
+					}
+				],
+				"name": "getAddressBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "myAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "myBool",
 				"outputs": [
@@ -47,6 +111,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "myString",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "myUint",
 				"outputs": [
 					{
@@ -56,6 +133,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_myAddress",
+						"type": "address"
+					}
+				],
+				"name": "setAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -80,6 +170,19 @@
 					}
 				],
 				"name": "setInt",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_myString",
+						"type": "string"
+					}
+				],
+				"name": "setString",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -126,11 +229,11 @@
 	},
 	"sources": {
 		"contracts/TypeExample.sol": {
-			"keccak256": "0x0e7fdd957a6c225590672350bfd9e78106b777524414d7ba971099dbf48e58ee",
+			"keccak256": "0x4a0a33cb98a9e88bf5826b33ae7302702215784b3661e5694e36be7cc81523aa",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c352b60801c30eb765bb9585493440a9d044428703a9aa7cda4325b980cce921",
-				"dweb:/ipfs/QmarhLiqvSJShQByXqbinmddrPku1s3JXUsVBmqW5eAfaj"
+				"bzz-raw://894bbba520355af4cb137057013bec6db78e42eca7733c5e30bbc4f829caaa5f",
+				"dweb:/ipfs/QmSfC8A8XreBM22hmvWyQqeGvYzPk3JAvieBo6Nr3TDrP4"
 			]
 		}
 	},

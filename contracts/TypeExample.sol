@@ -10,6 +10,32 @@ contract TypeExampleContract {
 
     uint8 public myInt = 0;
 
+    string public myString = "Hello";
+
+    address public myAddress;
+
+    function getAddressBalance (address _myAddress) public view returns (uint){
+        return _myAddress.balance;
+    }
+    function setAddress (address _myAddress) public {
+        myAddress = _myAddress;
+    }
+
+    function getBalance () public view returns (uint){
+        return myAddress.balance;
+    }
+
+    function setString(string memory _myString) public 
+    {
+        myString = _myString;
+
+    }
+
+    function compareString(string memory _myString) public view returns (bool)
+    {
+        return (keccak256(bytes(myString)) == keccak256(bytes(_myString)));
+    } 
+
     function setUint(uint _myUint) public 
     {
         unchecked

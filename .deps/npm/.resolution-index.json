@@ -20,19 +20,27 @@
       }
     }
   },
-  "contracts/TypeExample.sol": {
-    "__sources__": {
-      "contracts/TypeExample.sol": {
-        "content": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.8.14;\n\ncontract TypeExampleContract {\n\n    bool public myBool = true;\n\n    uint public myUint = 1;\n\n    uint8 public myInt = 0;\n\n    function setUint(uint _myUint) public \n    {\n        unchecked\n        {\n            myUint = _myUint;\n        }\n    }\n    function setInt(uint8 _myInt) public \n    {\n         myInt = _myInt;\n    }\n\n    function setBool(bool _myBool) public \n    {\n        myBool = _myBool;\n    }\n\n    function IncrementInt() public \n    {\n        myUint++;\n    }\n\n    function DecrementInt() public \n    {\n        unchecked\n        {\n            myUint--;\n        }\n    \n    }\n\n}\n",
-        "file": "contracts/TypeExample.sol"
-      }
-    }
-  },
   "contracts/MyContract.sol": {
     "__sources__": {
       "contracts/MyContract.sol": {
         "content": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.8.14;\n\ncontract MyContract {\n\n    string public ourString = \"Hello World!\";\n\n    function updateOurString(string memory _updateString) public\n    {\n        ourString = _updateString;\n    }\n\n}",
         "file": "contracts/MyContract.sol"
+      }
+    }
+  },
+  "contracts/TypeExample.sol": {
+    "__sources__": {
+      "contracts/TypeExample.sol": {
+        "content": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.8.14;\n\ncontract TypeExampleContract {\n\n    bool public myBool = true;\n\n    uint public myUint = 1;\n\n    uint8 public myInt = 0;\n\n    string public myString = \"Hello\";\n\n    address public myAddress;\n\n    function getAddressBalance (address _myAddress) public view returns (uint){\n        return _myAddress.balance;\n    }\n    function setAddress (address _myAddress) public {\n        myAddress = _myAddress;\n    }\n\n    function getBalance () public view returns (uint){\n        return myAddress.balance;\n    }\n\n    function setString(string memory _myString) public \n    {\n        myString = _myString;\n\n    }\n\n    function compareString(string memory _myString) public view returns (bool)\n    {\n        return (keccak256(bytes(myString)) == keccak256(bytes(_myString)));\n    } \n\n    function setUint(uint _myUint) public \n    {\n        unchecked\n        {\n            myUint = _myUint;\n        }\n    }\n    function setInt(uint8 _myInt) public \n    {\n         myInt = _myInt;\n    }\n\n    function setBool(bool _myBool) public \n    {\n        myBool = _myBool;\n    }\n\n    function IncrementInt() public \n    {\n        myUint++;\n    }\n\n    function DecrementInt() public \n    {\n        unchecked\n        {\n            myUint--;\n        }\n    \n    }\n\n}\n",
+        "file": "contracts/TypeExample.sol"
+      }
+    }
+  },
+  "contracts/Messenger.sol": {
+    "__sources__": {
+      "contracts/Messenger.sol": {
+        "content": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.8.14;\n\ncontract Messenger {\n\n    string message = \"Hello!\";\n\n    address public creatorAddress;\n\n    constructor (address _creatoraddress)\n    {\n        creatorAddress = _creatoraddress;\n    }\n\n    function readMessage () public view returns (string memory)\n    {\n        return message;\n    }\n\n    function writeMessage (string memory _message) public \n    {\n        if (creatorAddress == msg.sender)\n        {\n            message = _message;\n        }\n    }\n\n}",
+        "file": "contracts/Messenger.sol"
       }
     }
   }
